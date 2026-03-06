@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen con Borde Neón</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('fondo.gif') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            position: relative;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+        
+        h1, h2 {
+            font-family: 'Press Start 2P', cursive;
+            color: white;
+            text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #00ffff;
+            margin: 10px;
+        }
+        
+        @keyframes neonGlow {
+            0%, 100% { filter: drop-shadow(0 0 10px #ff00ff); }
+            25% { filter: drop-shadow(0 0 10px #00ff00); }
+            50% { filter: drop-shadow(0 0 10px #0000ff); }
+            75% { filter: drop-shadow(0 0 10px #ff0000); }
+        }
+        
+        .neon-box img {
+            width: 500px;
+            height: auto;
+            animation: neonGlow 3s infinite alternate;
+        }
+        
+        .button {
+            font-family: 'Press Start 2P', cursive;
+            background: black;
+            padding: 15px 30px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-shadow: 0 0 5px #ff00ff;
+            border-radius: 10px;
+            animation: neonGlow 3s infinite alternate;
+            border: none;
+        }
+        
+        .close-button {
+            font-family: 'Press Start 2P', cursive;
+            background: black;
+            padding: 10px 20px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            text-shadow: 0 0 2px #ff0000;
+            border-radius: 10px;
+            border: none;
+            margin-top: 15px;
+        }
+        
+        .menu {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            animation: neonGlow 3s infinite alternate;
+            max-width: 80%;
+            min-width: 250px;
+        }
+        
+        .description {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .neon-box img {
+                width: 300px;
+            }
+            .button {
+                font-size: 12px;
+                padding: 10px 20px;
+            }
+            .menu {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <h1>Únete a la Comunidad</h1>
+    <h2>Gaming Retro</h2>
+    <div class="neon-box">
+        <img src="gamepad.png" alt="Gamepad con borde neón">
+    </div>
+    <button class="button" onclick="document.getElementById('menu').style.display='block'">Registrarte</button>
+    <div id="menu" class="menu">
+        <h2>Creadores</h2>
+        <p>Brayan Zambrano</p>
+        <p>Mateo Vargas</p>
+        <p>Samuel Dominguez</p>
+        <button class="close-button" onclick="document.getElementById('menu').style.display='none'">Cerrar</button>
+        <p class="description">Este diseño utiliza la ley de figura y fondo de la Gestalt, resaltando la imagen y los elementos interactivos con efectos de neón sobre un fondo dinámico para captar la atención.</p>
+    </div>
+</body>
+</html>

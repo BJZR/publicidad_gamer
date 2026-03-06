@@ -1,0 +1,13 @@
+
+creado :
+-brayan Zambrano 
+-Mateo Vargas
+-Samuel Dominguez
+
+uso:
+-extraer los archivos antes que todo y que tenga internet para funciona 100% y en pantalla completa en el navegador 
+celular:
+-tendrá que instalar un editor para poder hacer un server
+-abrir o presional el index.html para abrilo con el editor que descargo.
+
+computador: simplemente lo ejecutas con Chrome o otro buscador o navegador.
